@@ -1,0 +1,73 @@
+C++
+1) precedence : double >> float >> long long int >> long int >> int >> characters , calculation jo h , woh higher datatype mei hoti h , e.g. cout << 'c' +1; will print 100
+
+2)time complexity is the rate at which the time taken increases with respect to the input. 
+computed in big - Oh notation 
+computed in worst case scenario
+avoid constants and avoid lower value 
+so for ncube + nsquared + 3n , write it just ncube
+big oh : worst case (upper bond)
+omega : best case (lower bond)
+theta ; average time complexity ( i.e. best case + worst case /2)
+e.g. for loop running from i=0 ; i <=n has O(N) time complexity
+
+3) space complexity is the memory space ur program takes , it is auxillary space (space that u take to solve a problem) + input space (space that u take to store the input)
+a , b 
+c= a+b
+a,b are input space , c is auxillary space 
+never ever change or manipulate the data given i.e. input .
+time limit = 1s means O(10^8)
+if 2s that means O(2*10^8) and so on 
+whenever there is division or modulo (%), the time complexity of it is in log 
+if n/10 , then O(logbase10(N))
+if n/4 , then O(logbase4(N)) 
+gcd or hcf , both are same, gcd(a,b) = gcd(a%b,b) (if a>b) 
+or (if b>a) gcd(a,b) = gcd(a,b%a) , do this till u get one of them to be zero , 
+gcd(a,b) = gcd(a%b,b) = gcd(a%b,b%(a%b)) and so on = gcd(_,0) then , _ is gcd(a,b)
+
+selection sort ka time complexity is O(Nsquared)(it is the best , average and worst time complexity) , it finds min , and swaps it with the first indexed element , and then find minm in the rest of the array and replace it with the second index and so on,
+
+bubble sort , shifts the maxm element to the last , by performing adjacent swaps and after every round of swaps, do it for the rest of the array.time complexity is O(Nsquared) (worst , average) O(N) (best) 
+
+if u access an index which is not there , it gives u runtime error.
+
+insertion sort , picks every element , starting from index 0 , checks if it is smaller than the element left to it, if yes ,swap , do this until it is not smaller than the element to its left , time complexity is O(Nsquared)(worst , avg) and O(N)(best) for an array of N elements.
+
+merge sort time complexity O(Nlog2(N)) (best , avg , worst)
+dividing array into halves then them into further halves , and so on until u are left with a singlet , then merge them back into ascending order. space complexity is O(N) 
+both merge sort , and quick sort are divide and conquer algorithm
+
+quick sort has time complexity as O(Nlog2N) and space complexity is O(1)
+
+during interviews for easier questions , if u know the ans , give the answer , but for difficult quesn , even if u know the answer , give a brute better and optimal soln , ask them specifics and come up with  a brute soln (the first that can come to one's mind) and then optimize them , fake it but that's what they want to learn , how u think , also in coding interview rounds , give proper variable names , if it is second largest no. , name its variable as secondLargest , 
+if u are using extra space , just to store ans and return output, tell that specifically to the interviewer , and also which part u are using as an extra space , tell them i haven't taken any extra space to solve the problem , just to return the answer.
+XOR property , says , any no. ^ any no. = 0 and any no.^0 =no. itself , readas (xor of any no. with 0 is the no. itself)
+the interviewer will not be satisfied with just the brute force soln 
+map takes log(N) time complexity and unordered map takes O(N) and in the worst case it takes O(Nsquared) 
+never deep dive into brute force soln , always tell the way u r going to solve and time complexity and move further
+if a direct soln from stl c++ exists , tell the interviewer about that soln , so he gets an idea that yes u have knowledge of stl as well
+the interview is not just about solving the problem and writing the right code , the code needs to be clear and readable to the interviewer.
+in interview , don't keep global variables , that is highly discouraged
+i u are ended up distorting the array , just mention that to the interviewer, or u can tell them that i would copy that array , and distort that one.
+don't go explaining a completely unintuitive soln to the interviewer , coz ofc he would know , tu ratt ke aaya h
+
+binary search is always applied whenever the search space is sorted.
+
+when u know the ans range is going to be b/w 1 and n and u r asked to find min or max , always go for binary search
+
+recursion uses recursive stack space, space complexity , proportional to the no. of recursive steps we did , like if performed recursion log(n) times then that is the space complexity.
+
+certain programming language takes time to add up 2 strings , time is O(n1) + O(n2) where n1 , n2 are the lengths of the strings
+
+private mei queue q1 , q2 define krne se kya hota h?
+ans : 1) encapsulation yaani uss class ke bahar koi queues ko bulake manipulate nhi kr skta , class ke bahr sirf voh methods use kr skte h inn queues ke liye jo uss class mei define h , toh iss tareeke se queues ka structure intact rehta h , this is oop and its principle is make data hidden ,and internal details private.
+if q1 is made public , 
+stack.q1.push(100); external code like this can directly change the queues
+
+
+2) controlled access : only methods defined in the class , can be called and use to make interactions with the data.
+
+3) flexibility : changing the code in stack will not affect external code , and it doesn't need to change , because it no longer involves direct interaction with the data structures , but it involves interaction with the method names, which are not going to change anyways.
+
+whenever u need the greatest or the smallest in const. time complexity , think about monotonic stack
+
