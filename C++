@@ -71,3 +71,6 @@ stack.q1.push(100); external code like this can directly change the queues
 
 whenever u need the greatest or the smallest in const. time complexity , think about monotonic stack
 
+imp : pass vector by reference and update under void function instead of passing by refernce and updating using vector<int> fn like ans = fn(..) , this saves a lot of memory and time , once converted my time limit exceeded soln to acceptable soln .
+
+
