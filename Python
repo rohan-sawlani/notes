@@ -1,0 +1,24 @@
+list1 = [1,2,"harish"]
+print(list1) #prints the same
+print(type(list1)) #prints list
+print(list1[2]) #prints harish
+list1[1] = "manish" #changes 2 to 'manish' 
+
+#a tuple is an object just like list , buts its elements can't be changed
+tuple1 = (1,"hatish,3)
+tuple1[2] = 2 #gives error
+
+#dictionary
+dict1 = {}
+dict1["virat"]=100
+print(type(dict1)) #prints dict
+print(dict1) #prints {'virat' : 100}
+print(dict1["virat"]) #prints 100
+print(dict1.get("virat")) #prints 100
+dict1["sachin"] = 400
+print(dict1.items()) #prints dict_items([('virat',100),('sachin',400)])
+print(dict1.keys()) #prints dict_keys(['virat,'sachin'])
+
+print("10-5 is" , 10-5) #prints 10-5 is 5 #print statement can print multiple cheezein under a comma
+The division operator / performs floating-point division.
+so 10/5 prints 2.0 , that is a result is always a floating point no. in python 
